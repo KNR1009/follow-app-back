@@ -3,4 +3,5 @@ Rails.application.routes.draw do
     registrations: 'auth/registrations'
   }
   resources :posts, only: [:create, :show, :index, :update, :destroy]
+  resources :users, only: [:create, :show, :index, :update, :destroy]
 end
