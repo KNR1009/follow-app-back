@@ -1,10 +1,7 @@
 class UsersController < ApplicationController
   def index
-    if current_user
-      render json: User.all
-    else 
-      render json: { is_login: false, message: "ユーザーが存在しません" }
-    end
-
+    user = User.find(1)
+    following = user.active_relationships
+    render json: following
   end
 end
