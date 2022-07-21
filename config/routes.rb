@@ -4,4 +4,5 @@ Rails.application.routes.draw do
   }
   resources :posts, only: [:create, :show, :index, :update, :destroy]
   resources :users, only: [:create, :show, :index, :update, :destroy]
+  resources :followings, only: [:create, :show, :index, :update, :destroy]
 end
