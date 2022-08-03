@@ -13,5 +13,5 @@ class User < ActiveRecord::Base
 
   # フォローされているユーザー一覧
   has_many :passive_relationships, class_name: "Relationship", foreign_key: "followed_id"
-  has_many :follower, through: :passive_relationships, source: :followed
+  has_many :follower, through: :passive_relationships, source: :follower
 end
